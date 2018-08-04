@@ -121,6 +121,11 @@ testsnap_SOURCES= \
 dummy.cpp:
 	touch $@
 
+testsnap_DEP = \
+    $(top_builddir)/glib-core/libglib-core.la \
+    $(top_builddir)/snap-core/libsnap-core.la \
+    $(NULL)
+
 #testsnap_LDADD = -lsnap-exp -lsnap-adv -lsnap-core -lglib-adv -lglib-core
 testsnap_LDADD = $(AM_LDFLAGS)
 
